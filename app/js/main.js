@@ -29,6 +29,10 @@
       .when('/add', {
         templateUrl: 'js/articles/newarticle.tpl.html',
         controller: 'NewArticleCtrl'
+      })
+      .when('/article/:id',{
+        templateUrl: 'js/articles/singlearticle.tpl.html',
+        controller: 'SingleCtrl'
       });
 
   }]);

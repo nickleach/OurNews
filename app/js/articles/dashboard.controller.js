@@ -4,8 +4,8 @@
 
   angular.module('News')
 
-  .controller('DashboardCtrl', ['$scope', '$http', 'PARSE', '$location', 'ArticleFactory',
-    function ($scope, $http, PARSE, $location, ArticleFactory) {
+  .controller('DashboardCtrl', ['$scope',  '$location', 'ArticleFactory',
+    function ($scope, $location, ArticleFactory) {
 
     $scope.allArticles = [];
 
@@ -15,6 +15,16 @@
       $scope.allArticles = data.results;
 
     });
+
+    $scope.deleteArt = function(x){
+
+      ArticleFactory.deleteArticle(x).success( function(){
+
+       $scope.allArticles =  _.without($scope.allArticles, x);
+
+      });
+
+    };
 
 
   }]);

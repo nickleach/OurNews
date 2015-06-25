@@ -29,9 +29,25 @@
 
     };
 
+    var deleteArticle = function(thisOne){
+
+      var deleteThis = endpoint + thisOne.objectId;
+
+      return $http.delete(deleteThis, PARSE.CONFIG);
+
+    };
+
+    var getSingle = function(id){
+
+      return $http.get(endpoint + id, PARSE.CONFIG);
+
+    }
+
     return {
       getArticles : getArticles,
-      addArticle : addArticle
+      addArticle : addArticle,
+      deleteArticle : deleteArticle,
+      getSingle : getSingle
     };
   }])
 

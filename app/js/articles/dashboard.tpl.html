@@ -3,13 +3,12 @@
 
 <ul>
   <li ng-repeat="s in allArticles">
-    <h4>{{ s.title }}</h4>
+    <a href="#/article/{{ s.objectId }}"><h4>{{ s.title }}</a><span ng-click="deleteArt(s)">X</span></h4>
     <br>
-    <img ng-src="{{ s.image }}"/>
+    <!-- <img ng-src="{{ s.image }}"/> -->
     <h6>By {{ s.author }} &nbsp {{ s.state }}, USA</h6>
     <br>
     {{ s.date }}
     <br>
-    <p>{{ s.story }}</p>
   </li>
 </ul>

@@ -4,7 +4,7 @@
 
   angular.module('News')
 
-  .controller('NewArticleCtrl', ['$scope', '$http', 'PARSE', '$location', 'ArticleFactory',
+  .controller('NewArticleCtrl', ['$scope',  '$location', 'ArticleFactory',
     function ($scope, $http, PARSE, $location, ArticleFactory) {
 
     $scope.addStory = function(story){
