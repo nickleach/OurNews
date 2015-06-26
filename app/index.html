@@ -4,6 +4,7 @@
   <title>Our News</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/vendor/normalize.css">
+  <link rel="stylesheet" href="css/vendor/font-awesome.css">
   <link rel="stylesheet" href="css/vendor/foundation.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
@@ -20,14 +21,15 @@
   <section class="top-bar-section">
     <!-- Right Nav Section -->
     <ul class="right">
-      <li class="active"><a href="#/add">Add</a></li>
-<!--       <li class="has-dropdown">
-        <a href="#">Right Button Dropdown</a>
-        <ul class="dropdown">
+<!--       <li class="has-dropdown"> -->
+        <li>
+        <a href="#/login">Login</a>
+<!--         <ul class="dropdown">
           <li><a href="#">First link in dropdown</a></li>
           <li class="active"><a href="#">Active link in dropdown</a></li>
-        </ul>
-      </li> -->
+        </ul> -->
+      </li>
+      <li class="active"><a href="#/add">Add</a></li>
     </ul>
 
     <!-- Left Nav Section -->
@@ -46,18 +48,21 @@
   <script src="js/vendor/underscore.js"></script>
   <script src="js/vendor/angular.js"></script>
   <script src="js/vendor/angular-route.js"></script>
+  <script src="js/vendor/cookies.js"></script>
+
 
   <!-- MAIN -->
   <script src="js/main.js"></script>
+  <!-- Controllers -->
   <script src="js/articles/dashboard.controller.js"></script>
   <script src="js/articles/newarticle.controller.js"></script>
-
   <script src="js/articles/singlearticle.controller.js"></script>
-
   <script src="js/articles/edit.controller.js"></script>
+  <script src="js/users/login.controller.js"></script>
 
 
 
+  <!-- Factories -->
   <script src="js/articles/article.factory.js"></script>
 
 

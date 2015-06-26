@@ -30,6 +30,10 @@
         templateUrl: 'js/articles/newarticle.tpl.html',
         controller: 'NewArticleCtrl'
       })
+      .when('/login', {
+        templateUrl: 'js/users/login.tpl.html',
+        controller: 'LoginCtrl'
+      })
       .when('/article/:id',{
         templateUrl: 'js/articles/singlearticle.tpl.html',
         controller: 'SingleCtrl'
