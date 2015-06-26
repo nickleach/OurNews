@@ -30,7 +30,11 @@
         templateUrl: 'js/articles/newarticle.tpl.html',
         controller: 'NewArticleCtrl'
       })
-      .when('/login', {
+      .when('/signup', {
+        templateUrl: 'js/users/signup.tpl.html',
+        controller: 'SignUpCtrl'
+      })
+      .when('/login',{
         templateUrl: 'js/users/login.tpl.html',
         controller: 'LoginCtrl'
       })

@@ -1,25 +1,13 @@
-<h2>SignUp or Login</h2>
+<h2>Log In</h2>
+<hr/>
 
 <fieldset>
-  <legend>Login</legend>
-  <form>
+  <legend>Enter Your Login Information</legend>
+  <form ng-submit="log(user)">
     <label>Username</label>
-    <input type="text">
+    <input ng-model="user.username" type="text">
     <label>Password</label>
-    <input type="password">
-  </form>
-</fieldset>
-<hr/>
-<fieldset>
-  <legend>Sign Up</legend>
-  <form>
-    <label>Name</label>
-    <input type="text">
-    <label>Email</label>
-    <input type="text">
-    <label>Username</label>
-    <input type="text">
-    <label>Password</label>
-    <input type="password">
+    <input ng-model="user.password" type="password">
+    <button>Log Me In</button>
   </form>
 </fieldset>
