@@ -1,3 +1,9 @@
+<img ng-src="{{ a.image }}">
+<h6>{{ a.state }}, United States</h6>
 <h2>{{ a.title }}</h2>
+<label>By {{ a.author }} </label>
+<label>Published on {{a.date }}</label>
+<a href="#/article/{{ a.objectId }}/edit">Edit</a>
 
+<hr/>
 <p>{{ a.story }}</p>

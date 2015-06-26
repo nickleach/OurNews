@@ -41,13 +41,22 @@
 
       return $http.get(endpoint + id, PARSE.CONFIG);
 
-    }
+    };
+
+    var editIt = function(edit){
+
+      var editEndpoint = endpoint + edit.objectId;
+
+      return $http.put(editEndpoint, edit, PARSE.CONFIG);
+
+    };
 
     return {
       getArticles : getArticles,
       addArticle : addArticle,
       deleteArticle : deleteArticle,
-      getSingle : getSingle
+      getSingle : getSingle,
+      editIt : editIt
     };
   }])
 

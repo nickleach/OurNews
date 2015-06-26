@@ -33,6 +33,10 @@
       .when('/article/:id',{
         templateUrl: 'js/articles/singlearticle.tpl.html',
         controller: 'SingleCtrl'
+      })
+      .when('/article/:id/edit', {
+        templateUrl: 'js/articles/editarticle.tpl.html',
+        controller: 'EditCtrl'
       });
 
   }]);

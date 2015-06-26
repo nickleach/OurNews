@@ -1,0 +1,15 @@
+  <form ng-submit="editArticle(a)">
+    <fieldset>
+      <legend>Edit Article</legend>
+
+      <p>Title: <input type="text" ng-model="a.title" value="{{ a.title }}"></p>
+      <p>Author <input type="text" ng-model="a.author" value="{{ a.author }}">
+      </p>
+      <p>Date <input type="text" ng-model="a.date" value="{{ a.date }}">
+      </p>
+      <p>Story <textarea ng-model="a.story" value="{{ a.story }}"></textarea>
+      </p>
+
+      <button>Update</button>
+    </fieldset>
+  </form>
