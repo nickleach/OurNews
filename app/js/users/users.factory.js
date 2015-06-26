@@ -1,7 +1,7 @@
 angular.module('News')
 
-.factory('UsersFactory', ['$http', 'PARSE',
-  function ($http, PARSE) {
+.factory('UsersFactory', ['$http', 'PARSE', '$cookies', '$location',
+  function ($http, PARSE, $cookies, $location) {
 
   var UserEndpoint = PARSE.URL + 'users';
 
@@ -23,18 +23,46 @@ angular.module('News')
 
   };
 
-  var logIn = function(user){
+  var validateUser = function(){
 
+    var thisUser = $cookies.get('thisUser');
 
-    var urlUser = 'username=' + user.username + '&password=' + user.password;
-
-    return $http.get(LoginEndpoint + urlUser, PARSE.CONFIG);
+      if(thisUser){
+        $location.path('/')
+      }else{
+        $location.path('/login')
+      }
 
   };
 
+
+  var logIn = function(user){
+
+
+    var params = 'username=' + user.username + '&password=' + user.password;
+
+    $http.get(LoginEndpoint + params, PARSE.CONFIG).success( function(data){
+
+      $cookies.put('thisUser', data)
+
+      return validateUser();
+
+    });
+
+  };
+
+  var logout = function(){
+    $cookies.remove('thisUser');
+    $location.path('/login')
+  };
+
+
+
   return {
     signUp : signUp,
-    logIn : logIn
+    validateUser : validateUser,
+    logIn : logIn,
+    logout : logout
 
   };
 }])

@@ -1,14 +1,29 @@
-<h2>Our News</h2>
-<h5>News by the people, for the people</h5>
+<div class="dashboard-all">
+  <div class="titlewrap">
+    <h2>Our News</h2>
+    <h5>News by the people, for the people</h5>
+  </div>
 
-<ul>
-  <li ng-repeat="s in allArticles">
-    <a href="#/article/{{ s.objectId }}"><h4>{{ s.title }}</a><span ng-click="deleteArt(s)">X</span></h4>
-    <br>
-    <!-- <img ng-src="{{ s.image }}"/> -->
-    <h6>By {{ s.author }} &nbsp {{ s.state }}, USA</h6>
-    <br>
-    {{ s.date }}
-    <br>
-  </li>
-</ul>
+  <div class="dashboard">
+    <ul class="small-block-grid-3">
+      <li ng-repeat="s in allArticles">
+        <div class="item-wrap">
+          <h6>{{ s.date }}</h6>
+          <div class="image-holder">
+            <a href="#/article/{{ s.objectId }}"><img ng-src="{{ s.image }}"></a>
+          </div>
+           <h6 class="author">{{ s.author }} &nbsp {{ s.state }}, USA</h6>
+          <h4>{{ s.title }}</h4>
+          <p>
+            {{ s.story }}
+          </p>
+
+
+
+
+        <span class="fa fa-trash-o"ng-click="deleteArt(s)">Delete Article</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

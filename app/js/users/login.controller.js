@@ -16,6 +16,11 @@
 
       };
 
+      $scope.logOut = function(){
+
+        UsersFactory.logout();
+
+      };
 
   }]);
 

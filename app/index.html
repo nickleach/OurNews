@@ -4,6 +4,7 @@
   <title>Our News</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/vendor/normalize.css">
+  <link href="http://fonts.googleapis.com/css?family=Raleway|Righteous" rel="stylesheet">
   <link rel="stylesheet" href="css/vendor/font-awesome.css">
   <link rel="stylesheet" href="css/vendor/foundation.css">
   <link rel="stylesheet" href="css/main.css">
@@ -12,9 +13,8 @@
   <nav class="top-bar" data-topbar role="navigation">
   <ul class="title-area">
     <li class="name">
-      <h1><a href="#/">Home</a></h1>
+      <h1 style="font-size: 40px"><a href="#/">Our News</a></h1>
     </li>
-     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
     <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
   </ul>
 
@@ -23,19 +23,19 @@
     <ul class="right">
       <li class="has-dropdown">
 
-        <a href="#/login">Login</a>
+        <a href="">User</a>
         <ul class="dropdown">
-          <li class="active"><a href="#/signup">Signup</a></li>
-<!--           <li class="active"><a href="#">Active link in dropdown</a></li> -->
+          <li ng-controller="LoginCtrl" ng-click="logOut()"><a href="#/login">Log In</a></li>
+          <li ng-controller="LoginCtrl" ng-click="logOut()"><a href="#/login">Log Out</a></li>
         </ul>
       </li>
-      <li><a href="#/signup">SignUp</a></li>
+      <li><a href="#/signup">Sign Up</a></li>
       <li class="active"><a href="#/add">Add</a></li>
     </ul>
 
     <!-- Left Nav Section -->
     <ul class="left">
-      <li><a href="#/about">About</a></li>
+      <!-- <li><a href="#/about">About</a></li> -->
     </ul>
   </section>
 </nav>
@@ -47,10 +47,20 @@
   <!-- VENDOR -->
   <script src="js/vendor/jquery.js"></script>
   <script src="js/vendor/underscore.js"></script>
+
+  <script src="js/vendor/foundation.js"></script>
+  <script src="js/vendor/foundation.topbar.js"></script>
+  <script src="js/vendor/foundation.dropdown.js"></script>
+
+  <script src="js/vendor/modernizr.js"></script>
+
+
+
   <script src="js/vendor/angular.js"></script>
   <script src="js/vendor/angular-route.js"></script>
   <script src="js/vendor/angular-cookies.js"></script>
 
+  <script>$(document).foundation();</script>
 
   <!-- MAIN -->
   <script src="js/main.js"></script>

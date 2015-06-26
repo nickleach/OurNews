@@ -1,18 +1,22 @@
-<h2>SignUp</h2>
+<div class="login">
+  <h2>SignUp</h2>
 
 
-<hr/>
-<fieldset>
-  <legend>Sign Up To Start Contributing</legend>
-  <form ng-submit="sign(newuser)">
-    <label>Name</label>
-    <input ng-model="newuser.name" type="text">
-    <label>Email</label>
-    <input ng-model="newuser.email" type="text">
-    <label>Username</label>
-    <input ng-model="newuser.username" type="text">
-    <label>Password</label>
-    <input ng-model="newuser.password" type="password">
-    <button>Sign Me Up</button>
-  </form>
-</fieldset>
+  <hr/>
+  <fieldset>
+    <legend>Sign Up To Start Contributing</legend>
+    <form ng-submit="sign(newuser)">
+    <div class="large-8 columns">
+      <label>Name</label>
+      <input ng-model="newuser.name" type="text">
+      <label>Email</label>
+      <input ng-model="newuser.email" type="text">
+      <label>Username</label>
+      <input ng-model="newuser.username" type="text">
+      <label>Password</label>
+      <input ng-model="newuser.password" type="password">
+      <button>Sign Me Up</button>
+    </div>
+    </form>
+  </fieldset>
+</div>

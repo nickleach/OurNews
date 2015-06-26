@@ -2,7 +2,7 @@
 
   'use strict';
 
-  angular.module('News', ['ngRoute'])
+  angular.module('News', ['ngRoute', 'ngCookies'])
 
   .constant('PARSE', {
     URL: 'https://api.parse.com/1/',

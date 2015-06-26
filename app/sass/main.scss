@@ -1,4 +1,77 @@
+body{
+  background-color: #F5F5F5;
+}
 .container{
-  width: 800px;
+  width: 1000px;
   margin: 50px auto;
+  background-color: white;
+  border: 1px solid lightgrey;
+  height: 100%;
+}
+h2{
+  font-family: 'Raleway', sans-serif;
+}
+h1{
+  font-family: 'Raleway', sans-serif;
+
+}
+.dashboard-all{
+  width: 90%;
+  margin: 20px auto;
+}
+.dashboard{
+  height: 100%;
+  ul{
+    list-style: none;
+  }
+  h4{
+    font-family: 'Righteous', cursive;
+    text-align: center;
+  }
+  h6{
+    color: grey;
+    font-size: 12px;
+  }
+  img{
+    height: auto;
+    width: 100%;
+  }
+
+
+}
+.author{
+  font-weight: bold;
+}
+.titlewrap{
+  text-align: center;
+}
+.item-wrap{
+ p{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+ }
+}
+.image-holder{
+  height: 250px;
+  display: block;
+  overflow: hidden;
+
+}
+.login{
+
+  width: 800px;
+
+  margin: 50px auto;
+
+  height: 100%;
+
+}
+.addnew{
+    width: 800px;
+
+  margin: 50px auto;
+
+  height: 100%;
+
 }
